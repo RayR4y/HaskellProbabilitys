@@ -25,7 +25,7 @@ combination_prob azw p = [((snd x),(snd y),(snd z)) | x <- (drop p probabilityli
 combinations_count azw p = [((fst x),(fst y),(fst z)) | x <- (drop p probabilitylist), y <- probabilitylist, z <- probabilitylist, ((fst x)+(fst y)+(fst z))<=azw+p]
 
 
-
+-- calculates probability for getting n specified things when trying azw times and already having tried p times if the generall Probabilitys are like in the probability list above
 wsksumvar n azw p
 
    | n == 1 = sumlist 0 (combinations_calc_1 azw p)
